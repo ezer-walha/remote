@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="assets/css/animate.min.css">
   <link rel="stylesheet" href="assets/css/slicknav.css">
   <link rel="stylesheet" href="assets/css/style.css">
+
   <link rel="stylesheet" href="assets/temp/css/custom-bs.css">
   <link rel="stylesheet" href="assets/temp/css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="assets/temp/css/bootstrap-select.min.css">
@@ -25,6 +26,9 @@
   <link rel="stylesheet" href="assets/temp/css/owl.carousel.min.css">
   <link rel="stylesheet" href="assets/temp/css/animate.min.css">
   <link rel="stylesheet" href="assets/temp/css/quill.snow.css">
+  
+  <link rel="stylesheet" href="assets/css/jquery-ui.css">
+  <link rel="stylesheet" href="assets/css/slick.css">
   
 
   <!-- MAIN CSS -->
@@ -51,7 +55,7 @@
   <script src="assets/js/plugins.js"></script>
   <script src="assets/js/gijgo.min.js"></script>
 
-
+  <script src="assets/js/range.js"></script>
 
   <!--contact js-->
   <script src="assets/js/contact.js"></script>
@@ -78,5 +82,20 @@
   <script src="assets/temp/js/bootstrap-select.min.js"></script>
   
   <script src="assets/temp/js/custom.js"></script>
+  <script>
+    $( function() {
+        $( "#slider-range" ).slider({
+            range: true,
+            min: 0,
+            max: 24600,
+            values: [ 750, 24600 ],
+            slide: function( event, ui ) {
+                $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] +"/ Year" );
+            }
+        });
+        $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+            " - $" + $( "#slider-range" ).slider( "values", 1 ) + "/ Year");
+    } );
+    </script>
 </body>
 </html>
