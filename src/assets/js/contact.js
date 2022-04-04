@@ -1,4 +1,4 @@
-$(document).ready(function(){
+jquery(document).ready(function(){
     
     (function($) {
         "use strict";
@@ -82,4 +82,4 @@ $(document).ready(function(){
     })
         
  })(jQuery)
-})
+});

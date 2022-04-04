@@ -171,7 +171,7 @@ label {
 }
 
 /* line 111, ../../Arafath/CL/December/235. Job board/HTML/scss/theme-default.scss */
-h3 {
+h3 ,h2 {
   font-size: 24px;
 }
 
@@ -1448,6 +1448,13 @@ h3 {
 .slider_area .single_slider .slider_text h3 {
   font-family: "Roboto", sans-serif;
   font-size: 56px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.slider_area .single_slider .slider_text h2 {
+  font-family: "Roboto", sans-serif;
+  
   font-weight: 500;
   color: #fff;
 }
