@@ -1,23 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { JobFormComponent } from './component/job-form/job-form.component';
-import { HomeComponent } from './component/home/home.component';
-import { HeaderComponent } from './component/header/header.component';
-import { FooterComponent } from './component/footer/footer.component';
-import { BrowserJobComponent } from './component/browser-job/browser-job.component';
-import { CandidateComponent } from './component/candidate/candidate.component';
-import { ContactComponent } from './component/contact/contact.component';
-import { JobDetailsComponent } from './component/job-details/job-details.component';
-import { LoginComponent } from './component/login/login.component';
-
+import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { BrowserJobComponent } from './components/browser-job/browser-job.component';
+import { CandidateComponent } from './components/candidate/candidate.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { JobDetailsComponent } from './components/job-details/job-details.component';
+import { PostJobComponent } from './components/post-job/post-job.component';
+import { LoginComponent } from './components/login/login.component';
+import { CandidatureSpontaneeComponent } from './components/candidature-spontanee/candidature-spontanee.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    JobFormComponent,
     HomeComponent,
     HeaderComponent,
     FooterComponent,
@@ -25,12 +26,14 @@ import { LoginComponent } from './component/login/login.component';
     CandidateComponent,
     ContactComponent,
     JobDetailsComponent,
+    PostJobComponent,
     LoginComponent,
-    
+    CandidatureSpontaneeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,ReactiveFormsModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
